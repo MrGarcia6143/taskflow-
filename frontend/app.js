@@ -1,7 +1,8 @@
 // ── Config ────────────────────────────────────────────────────────────────────
 // Cambia esta URL por la URL de tu backend en Render cuando lo despliegues.
 // En desarrollo local usa: http://localhost:3000
-const API_URL = window.ENV_API_URL || "http://localhost:3000";
+const API_URL = window.ENV_API_URL || "https://taskflow-api-13r1.onrender.com";
+
 
 // ── State ─────────────────────────────────────────────────────────────────────
 let tasks = [];
