@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="header">
+    <div class="logo">
+      <span class="logo-mark">◆</span>
+      <span class="logo-text">TaskFlow</span>
+    </div>
+    <div class="header-right">
+      <span class="status-dot"></span>
+      <span class="status-label">en línea</span>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <p class="hero-eyebrow">tu espacio de trabajo</p>
+      <h1 class="hero-title">
+        Haz las cosas<br />
+        <em>que importan.</em>
+      </h1>
+    </section>
+
+    <section class="input-section">
+      <div class="input-wrapper">
+        <input
+          id="task-input"
+          type="text"
+          placeholder="¿Qué tienes que hacer hoy?"
+          autocomplete="off"
+          maxlength="120"
+        />
+        <button id="add-btn" aria-label="Agregar tarea">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="tasks-section">
+      <div class="tasks-header">
+        <span id="task-count" class="task-count">0 tareas</span>
+        <button id="clear-done-btn" class="clear-btn" style="display:none">
+          Limpiar completadas
+        </button>
+      </div>
+
+      <div id="task-list" class="task-list">
+        <div class="empty-state" id="empty-state">
+          <div class="empty-icon">✦</div>
+          <p>Sin tareas pendientes.<br/>Agrega algo arriba.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

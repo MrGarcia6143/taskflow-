@@ -1,0 +1,8 @@
+# Configuración para Netlify (frontend gratuito)
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
